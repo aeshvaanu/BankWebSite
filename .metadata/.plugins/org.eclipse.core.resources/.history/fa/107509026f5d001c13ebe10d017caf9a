@@ -1,0 +1,41 @@
+package fb1;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Create_NewAccount_Test {
+	private static final String WebElement = null;
+	WebDriver driver;
+	@BeforeClass 
+	public void setup() {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver ();
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.get("https://www.facebook.com");
+		}
+
+	@Test
+	public void Create_New_Account() {
+	driver.findElement(By.xpath("//div[@class='_6ltg']//a[text()='Create new account']")).click();
+Assert.assertEquals(driver.findElement(By.xpath("//div[@class='pvl _52lp _59d-']//div[text()='Sign Up']")).getText() ,"Sign Up");
+	 
+	 
+		 
+			
+	
+	
+	
+	
+	}
+	}

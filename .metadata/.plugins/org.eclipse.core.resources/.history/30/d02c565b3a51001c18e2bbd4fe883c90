@@ -1,0 +1,48 @@
+package BaseTest;
+
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
+import factory.DriverFactory;
+import pages.AccountsPage;
+import pages.CommonsPage;
+import pages.LoginPage;
+import pages.ProductInfoPage;
+import pages.RegistrationPage;
+import pages.SearchResultPage;
+
+public class BaseTest {
+	DriverFactory df;
+	public WebDriver driver;
+	public Properties prop;
+
+	public LoginPage loginPage;
+	public AccountsPage accPage;
+	public SearchResultPage searchResPage;
+	public ProductInfoPage productInfoPage;
+	public RegistrationPage registrationPage;
+	public CommonsPage commonsPage;
+	@BeforeTest
+	@Parameters ({"Browser", "browserversion"})
+	
+	public void setUp(String BrowserName, String browserVersion) {
+		df = new DriverFactory();
+		prop = df.init_prop();
+		prop.setProperty("BrowserName", BrowserName);
+		driver = df.init_driver(BrowserName, browserVersion);
+		loginPage = new LoginPage(driver);
+		commonsPage = new CommonsPage(driver);
+	}
+
+	@AfterTest
+	public void tearDown() {
+		driver.quit();
+	}
+
+}
+

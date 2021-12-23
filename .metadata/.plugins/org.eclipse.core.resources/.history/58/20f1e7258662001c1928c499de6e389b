@@ -1,0 +1,50 @@
+package Pages_Test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import BaseTest.BaseTest;
+import Pages.Product_Result_Page;
+
+public class Product_PageTest extends BaseTest{
+	@BeforeClass
+	public void setup() {
+		lpg.Login();
+	}
+@Test(priority=1)
+public void Product_PageUrl_Test() {
+	Assert.assertEquals(lpg.getUrl(), "https://www.saucedemo.com/inventory.html");
+}
+@Test(priority=2)
+ public String Product_Test() {
+	String Product=ppg.product();
+	 Assert.assertEquals(Product,"Sauce Labs Backpack");
+	return Product;
+ }
+@Test(priority=3)
+public void Add_to_Cart_Test() {
+	ppg.ADD_TO_CART();
+Assert.assertEquals(driver.findElement(By.xpath("//button[@id='remove-sauce-labs-backpack']")).getText(),"REMOVE");
+	}
+@Test(priority=4)
+public Product_Result_Page product_result_PageTest() {
+	driver.findElement(By.xpath("//a[@id='item_4_title_link']//div")).click();
+	return Product_Result_Page(driver);
+}
+private Product_Result_Page Product_Result_Page(WebDriver driver) {
+	// TODO Auto-generated method stub
+	return null;
+}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+WalMart.outdir=test-output
+eclipse.preferences.version=1
+fb1.outdir=test-output
+jan2021POMSeries.outdir=test-output
+jan2021POMSeriesxmlTemplateFile=${workspace_loc\:jan2021POMSeries/resourcesFolder/TestRunner/testng.xml}

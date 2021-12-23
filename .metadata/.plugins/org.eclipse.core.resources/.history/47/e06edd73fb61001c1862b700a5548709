@@ -1,0 +1,16 @@
+package Pages;
+
+import org.openqa.selenium.WebDriver;
+
+public class Product_Result_Page {
+
+	
+	
+	private WebDriver driver;
+
+	public Product_Result_Page(WebDriver driver) {
+		this.driver= driver;
+	}
+	
+	
+}

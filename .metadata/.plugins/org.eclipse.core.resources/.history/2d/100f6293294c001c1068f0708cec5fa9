@@ -1,0 +1,32 @@
+package BaseTest;
+
+public class BaseTest {
+	DriverFactory df;
+	public WebDriver driver;
+	public Properties prop;
+
+	public LoginPage loginPage;
+	public AccountsPage accPage;
+	public SearchResultPage searchResPage;
+	public ProductInfoPage productInfoPage;
+	public RegistrationPage registrationPage;
+	public CommonsPage commonsPage;
+
+	@Parameters({"browser", "browserversion"})
+	@BeforeTest
+	public void setUp(String browserName, String browserVersion) {
+		df = new DriverFactory();
+		prop = df.init_prop();
+		prop.setProperty("browser", browserName);
+		driver = df.init_driver(browserName, browserVersion);
+		loginPage = new LoginPage(driver);
+		commonsPage = new CommonsPage(driver);
+	}
+
+	@AfterTest
+	public void tearDown() {
+		driver.quit();
+	}
+
+}
+

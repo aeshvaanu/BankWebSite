@@ -1,0 +1,44 @@
+package Pages_Test;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import BaseTest.BaseTest;
+import Pages.LoginPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LoginPage_Test {
+public WebDriver driver;	
+public LoginPage lpg;
+	
+	@Test
+	 public void WebDriverManager(String WebDriver) {
+	 WebDriverManager.chromedriver().setup();
+	  driver = new ChromeDriver();
+	 driver.manage().deleteAllCookies();
+	 driver.manage().window().maximize();
+	 driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	 driver.get("https://www.SauceDemo.com");
+	 }
+
+ 
+	
+	
+	 @Test
+	 public void titleTest() {
+	String Title=driver.getTitle();
+	Assert.assertEquals(Title,"Swag Labs");
+	 }
+
+  @Test
+  public void loginpageurl() {
+	 Assert.assertEquals(lpg.getUrl(),"https://www.saucedemo.com/");
+  }
+
+
+}

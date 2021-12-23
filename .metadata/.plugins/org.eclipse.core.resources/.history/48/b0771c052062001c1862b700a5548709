@@ -1,0 +1,27 @@
+package Pages_Test;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import BaseTest.BaseTest;
+
+public class Product_Result_Page_Test extends BaseTest {
+	
+	
+	
+@BeforeClass
+	public void setup() {
+	lpg.Login();
+	prp.clickonProduct();
+}
+	
+	
+	@Test
+	public void productresultPage_url_Test() {
+		
+		
+		Assert.assertEquals(prp.productresultPage_url(),"https://www.saucedemo.com/inventory-item.html?id=4");
+	}
+
+}

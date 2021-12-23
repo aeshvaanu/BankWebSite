@@ -1,0 +1,47 @@
+package Pages;
+
+import java.security.PrivateKey;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import Utils.ElementUtil;
+
+public class Product_Page {
+	
+private WebDriver driver;
+private ElementUtil eutil;
+
+private By SauceLabsBackpack =By.xpath("(//div[@class='inventory_item_name'])[1]");
+private By ADD_To_cart= By.id("add-to-cart-sauce-labs-backpack");
+
+
+	public Product_Page(WebDriver driver) {
+		this.driver=driver;
+		eutil=new ElementUtil(driver);
+	}
+
+	public void product_Page_Url() {
+	String url=	driver.getCurrentUrl();
+		
+	}
+	
+
+
+	public void  ADD_TO_CART() {
+		driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+		
+	
+	}
+	public Product_Result_Page  Product_detail() {
+		driver.findElement(SauceLabsBackpack).click();
+		return Product_Result_Page(driver);
+	}
+
+	
+	
+
+	}
+
+	
+

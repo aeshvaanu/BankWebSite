@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [Test automtion regression suite]" guice-stage="DEVELOPMENT" verbose="3">
+  <test thread-count="3" name="Default test(failed)" verbose="3">
+    <classes>
+      <class name="tests.LoginPageTest">
+        <methods>
+          <include name="forgotPwdLinkTest"/>
+          <include name="tearDown"/>
+          <include name="loginPageTitleTest"/>
+          <include name="loginTest"/>
+          <include name="setUp"/>
+          <include name="loginPageUrlTest"/>
+        </methods>
+      </class> <!-- tests.LoginPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Test automtion regression suite] -->

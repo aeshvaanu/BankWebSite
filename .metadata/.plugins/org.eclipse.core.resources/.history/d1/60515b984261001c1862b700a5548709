@@ -1,0 +1,18 @@
+package Pages;
+
+import org.openqa.selenium.WebDriver;
+
+import Utils.ElementUtil;
+
+public class AccountPage {
+  
+	private WebDriver driver;
+	private ElementUtil eutil;
+	
+	
+	
+	
+	
+	}
+
+

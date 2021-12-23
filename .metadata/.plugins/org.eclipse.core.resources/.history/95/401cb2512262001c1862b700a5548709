@@ -1,0 +1,5 @@
+package Pages;
+
+public class menubar_pageTest extends BaseTest{
+
+}

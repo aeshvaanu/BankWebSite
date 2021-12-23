@@ -1,0 +1,21 @@
+package Pages;
+
+import org.openqa.selenium.WebDriver;
+
+import Utils.ElementUtil;
+
+public class Product_Page {
+	
+private WebDriver driver;
+private ElementUtil eutil;
+	public Product_Page(WebDriver driver) {
+		this.driver=driver;
+		eutil=new ElementUtil(driver);
+	}
+
+	public void product_Page() {
+	String url=	driver.getCurrentUrl();
+		
+	}
+	
+}

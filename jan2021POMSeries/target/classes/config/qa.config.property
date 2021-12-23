@@ -1,0 +1,11 @@
+browser=chrome
+url=https://www.opencart.com/index.php?route=account/login
+headless = false
+incognito = false
+highlight = true
+
+username=nkmuyur188@evodok.com
+password=User@1234
+
+remote = true
+huburl = 

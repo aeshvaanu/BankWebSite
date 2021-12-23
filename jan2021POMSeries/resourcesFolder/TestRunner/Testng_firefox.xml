@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test automtion regression suite" thread-count="3" parallel="tests"
+verbose="3">
+
+	<test name="OpenCart Test">
+	<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="LoginPageTest.java">
+			</class>
+		</classes>
+	</test>
+
+	<test name="OpenCart Test">
+		<parameter name="browser" value="firefox"/>
+	
+		<classes>
+			<class name="OpenCart Test" />
+			<parameter name="browser" value="firefox"/>
+		</classes>
+	</test>
+
+	<test name="OpenCart Test">
+		<parameter name="browser" value="firefox"/>
+	
+		<classes>
+			<class name="OpenCartTest" />
+			<parameter name="browser" value="safari"/>
+	
+		</classes>
+	</test>
+
+</suite>

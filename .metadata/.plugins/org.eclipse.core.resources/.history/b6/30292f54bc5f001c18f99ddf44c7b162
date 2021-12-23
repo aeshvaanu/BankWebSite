@@ -1,0 +1,13 @@
+package Pages;
+
+import org.openqa.selenium.WebDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LoginPage {
+	WebDriver driver;
+	WebDriverManager.
+	
+	
+
+}

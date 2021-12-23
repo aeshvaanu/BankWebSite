@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test automtion regression suite" thread-count="3" verbose="3">
+
+	
+	
+	
+
+	<test name=" LoginPageTest- safari"  enabled = "true">
+		<parameter name="browser"  value="safari" />
+		<parameter name="browserversion" value="79" />
+
+		<classes>
+			<class name="tests.LoginPageTest" />
+		</classes>
+	</test>
+	<test name="AccountsPageTest - chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browserversion" value="96" />
+
+		<classes>
+			<class name="tests.AccountsPageTest" />
+		</classes>
+	</test>
+	
+
+</suite>
+
+
+
+
+

@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: fb1.Fb_Loginpage_Test
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 0.525 s <<< FAILURE! - in fb1.Fb_Loginpage_Test
+setDriver(fb1.Fb_Loginpage_Test)  Time elapsed: 0.311 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Can inject only one of <ITestContext, XmlTest> into a @BeforeTest annotated setDriver.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+

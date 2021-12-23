@@ -1,0 +1,32 @@
+package Pages_Test;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import BaseTest.BaseTest;
+
+public class Product_PageTest extends BaseTest{
+	@BeforeClass
+	public void setup() {
+		lpg.Login();
+	}
+@Test
+public void Product_PageUrl_Test() {
+	Assert.assertEquals(lpg.getUrl(), "https://www.saucedemo.com/inventory.html");
+}
+@Test
+ public void Product_Test() {
+	String Product=ppg.product();
+	 Assert.assertEquals(Product,"Sauce Labs Backpack");
+ }
+@Test
+public void Add_to_Cart_Test() {
+	ppg.ADD_TO_CART();
+Assert.assertEquals(driver.findElement(By.xpath("//button[@id='remove-sauce-labs-backpack']")).getText(),"REMOVE");
+	
+	
+}
+}

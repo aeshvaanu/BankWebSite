@@ -1,0 +1,8 @@
+package Pages_Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LoginPage {
+	WebDriverManager
+
+}
